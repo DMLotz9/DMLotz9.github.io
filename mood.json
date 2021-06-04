@@ -1,8 +1,7 @@
 [
-    {
-       “mood”: “Green”,
-       “description”: “Sample description for action plan.”,
-       “created”: “1/1/21 3:47 pm”,
+    {"Mood": "Green",
+        "Description": "Sample description for an action plan.",
+        "Created": "1/1/2021 3:47pm",
        "image": "https://drive.google.com/file/d/1-57QfaM2DCrSI5C6qhS3bo0pAavNYq6S/view?usp=sharing"
     }
 ]
