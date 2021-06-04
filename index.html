@@ -1,9 +1,50 @@
+<!DOCTYPE>
 <html>
-  <head>
-    <title>Test Site</title>
-  </head>
-  
+    <head>
+        <title>Launch Checklist</title>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css" />
+        <script src = "script.js"></script>
+        <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    </head>
     <body>
-      Hello Dylan
+        <h1>Mood Status Tracker</h1>
+        <div id="moodStatus">
+            <!-- Fetch some planetary data -->
+        </div> 
+        <div id="moodInput">
+            <form action="" method="POST">
+                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
+                    <label>Current Mood: </label> 
+                    <select id="mood_dropdown" name="mood_dropdown">
+                        <option value="Green">Green</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Red">Red</option></select>
+                </div>
+                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
+                    <label>Level <input type="text" name="level" id="level"/></label>
+                </div>
+                <button id="formSubmit">Submit</button>
+            </form>
+        </div>
+        <script>
+            window.addEventListener("load", function(){
+                let form = document.querySelector("form");
+                form.addEventListener("submit", function(event){
+                    let mood = document.querySelector("input[name=mood_dropdown]").value;
+                    let level = document.querySelector("input[name=level]").value;
+
+                    
+                    if (mood === "" || level === ""){
+                        alert("All fields are required!");
+                        event.preventDefault();
+                    }
+                });
+
+            });
+
+            
+        </script>  
     </body>
-    </html>
+</html>
