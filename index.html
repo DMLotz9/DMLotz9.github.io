@@ -5,6 +5,39 @@
         <link rel = "stylesheet" type = "text/css" href = "styles.css" />
         <script src = "script.js"></script>
         <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+                        
+
+            <script>
+                var firebaseConfig = {
+                    apiKey: "AIzaSyC5PhZnk9ZXImVoOEpDmike7B2EtaanaH4",
+                    authDomain: "moodtracker-c0e37.firebaseapp.com",
+                    projectId: "moodtracker-c0e37",
+                    storageBucket: "moodtracker-c0e37.appspot.com",
+                    messagingSenderId: "771719836238",
+                    appId: "1:771719836238:web:68a94edcb29772f1d3891f",
+                    measurementId: "G-GB9DWZFK7L"
+                        };
+
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+                firebase.analytics();
+                function writeUserData(userId, name, email, imageUrl) {
+                firebase.database().ref('users/' + userId).set({
+                    username: "Dylan",
+                    email: "Dylan@email.com",
+                    profile_picture : "imageUrl"
+ });
+       }
+</script>
     </head>
     <body>
         <h1>Mood Status Tracker</h1>

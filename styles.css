@@ -19,18 +19,18 @@ div {
     padding: 10px;
 }
 
-#launchStatusCheck {
+/* #launchStatusCheck {
     background-color: #ECF0F1;
     text-align: center;
     margin: 50px auto;
     width: 50%;
     border: 3px solid black;
     padding: 10px;
-}
+} */
 
 #moodStatus img {
-    max-width: 40%;
-    max-height: 250px;
+    max-width: 250px;
+    max-height: 350px;
 }
 
 #moodStatus {
@@ -43,7 +43,7 @@ div {
 }
 
 button {
-    background-color: #419f6a;
+    background-color: green;
     border: none;
     color: white;
     border-radius: 8px;
